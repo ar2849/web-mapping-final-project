@@ -29,7 +29,7 @@ map.on('load', function() {
       });
 
 //colors the map with the percentages of HIV infection per state
-      map.addLayer({
+      //map.addLayer({
         id: 'nyc-community-districts',
         type: 'fill',
         source: 'community-district-population',
