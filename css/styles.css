@@ -9,11 +9,15 @@
 #sidebar {
   width: 200px;
   position: absolute;
-  top: 100;
+  top: 150;
   left: 0;
   bottom: 0;
   z-index: 10;
   padding: 15px;
+}
+
+#mouseinst {
+  text-align: center;
 }
 
 .info-box {
