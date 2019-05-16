@@ -61,20 +61,20 @@ map.on('style.load', function() {
 map.on('mousemove', function (e) {
   // query for the features under the mouse, but only in the lots layer
   var features = map.queryRenderedFeatures(e.point, {
-      layers: ['p_diagnoses'],
+      layers: ['highlight'],
   });
 
   // get the first feature from the array of returned features.
   var webmap = features[0]
 
-  if (webmap) {  // if there's a lot under the mouse, do stuff
+  if (highlight) {  // if there's a lot under the mouse, do stuff
     map.getCanvas().style.cursor = 'pointer';  // make the cursor a pointer
 
     // lookup the corresponding description for the land use code
     var landuseDescription = LandUseLookup(parseInt(lot.properties.landuse)).description;
 
     // use jquery to display the address and land use description to the sidebar
-    $('#p_population').text(lot.properties.population);
+    $('#p_population').text(feature.properties.p_population);
     $('#p-diagnoses').text(numberofhivdiagnoses);
 
     // set this lot's polygon feature as the data for the highlight source
