@@ -70,7 +70,6 @@ map.on('mousemove', function (e) {
   if (webmap) {  // if there's a lot under the mouse, do stuff
     map.getCanvas().style.cursor = 'pointer';  // make the cursor a pointer
 
-    // use jquery to display the address and land use description to the sidebar
     $('#population').text(webmap.properties.p_population);
     $('#diagnoses').text(webmap.properties.p_diagnoses);
     $('#sexed').text(webmap.properties.p_sexed);
@@ -80,18 +79,13 @@ map.on('mousemove', function (e) {
     $('#hiv6').text(webmap.properties.p_hiv6);
     $('#hiv9').text(webmap.properties.p_hiv9);
 
-
-
     // set this lot's polygon feature as the data for the highlight source
-    map.getSource('webmap').setData(webmap.geometry);
-  } else {
-    map.getCanvas().style.cursor = 'default'; // make the cursor default
+//    map.getSource('webmap').setData(webmap.geometry);
+//  } else {
+//    map.getCanvas().style.cursor = 'default'; // make the cursor default
 
     // reset the highlight source to an empty featurecollection
-    map.getSource('webmap').setData({
-      type: 'FeatureCollection',
-      features: []
-    });
+
   }
 })
 });
