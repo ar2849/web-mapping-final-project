@@ -20,6 +20,9 @@
   text-align: center;
 }
 
+.background {
+  background-color: #c3c3c3;
+}
 .info-box {
   top: 10%;
   left: 10%;
