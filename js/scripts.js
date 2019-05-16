@@ -11,46 +11,32 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 map.on('style.load', function() {
-
-map.addSource('webmap', {
-    type: 'geojson',
-    data: './data/webmap.geojson',
+  map.addSource('webmap', {
+  type: 'geojson',
+  data: './data/webmap.geojson',
   });
-});
-
-
-//    $.getJSON('data/webmap.geojson', function(data) {
-//      data.features.map(function(feature) {
-//        feature.properties.pop2010 = parseInt(feature.properties.pop2010);
-//      });
-//}
-      //data.features.forEach(function(feature) {
-      //  console.log(feature.properties.pop2010)
-    //  })
-
-
-    //  map.addSource('community-district-population', {
-    //      'type': 'geojson',
-    //      'data': data,
-  //    });
-
-
+  $.getJSON('data/webmap.geojson'),
+  function(data) {
+  data.features.map(function(feature) {
+  feature.properties.p_diagnoses = parseInt(feature.properties.p_diagnoses);
+  });
+ };
 //colors the map with the percentages of HIV infection per state
-      //map.addLayer({
-        //id: 'nyc-community-districts',
-        //type: 'fill',
-        //source: 'community-district-population',
-        //paint: {
-          //'fill-opacity': 0.7,
-          //'fill-color': [
-              //'interpolate',
-              //['linear'],
-              //['get', 'pop2010'],
-            //  0, '#f1eef6',
-            //  50000, '#bdc9e1',
-            //  100000, '#74a9cf',
-            //  250000, '#2b8cbe',
-            //  500000, '#2b8cbe'
-        //  ],
-      //  }
-    //  });
+  map.addLayer({
+  id: 'p_diagnoses',
+  type: 'fill',
+  source: 'webmap',
+  paint: {
+  'fill-opacity': 0.7,
+  'fill-color': [
+ 'interpolate',
+  ['linear'],
+  ['get', 'p_diagnoses'],
+  5, '#fee5d9',
+  10, '#fcae91',
+  15, '#fb6a4a',
+  20, '#cb181d',
+  ],
+ }
+ });
+});

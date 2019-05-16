@@ -1,7 +1,43 @@
 #mapcontainer {
-  width: 75%;
+  width: 100%;
   height: 75%;
   background: lightgray;
-  margin-left: left;
+  margin-left: right;
   margin: 5px;
+}
+
+#sidebar {
+  width: 200px;
+  position: absolute;
+  top: 100;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 15px;
+}
+
+.info-box {
+  top: 10%;
+  left: 10%;
+  z-index: 10;
+  background-color: #c3c3c3;
+  padding: 15px;
+  border-radius: 11px;
+  box-shadow: 1px 1px 7px #525252;
+  margin-bottom:15px
+}
+
+.legend-color-box {
+  height: 10%;
+  width: 10%;
+  float: right;
+  margin-right: 10px;
+}
+
+.legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
 }
