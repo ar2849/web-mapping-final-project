@@ -10,8 +10,14 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
-//getjson,
-//map.on('load', function() {
+map.on('style.load', function() {
+
+map.addSource('webmap', {
+    type: 'geojson',
+    data: './data/webmap.geojson',
+  });
+});
+
 
 //    $.getJSON('data/webmap.geojson', function(data) {
 //      data.features.map(function(feature) {
