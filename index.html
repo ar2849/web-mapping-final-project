@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
@@ -17,57 +17,60 @@
   </h1>
   <h3 align="center">US HIV Diagnosis Rate per 100,000 (2017)</h3>
   <div id="mouseinst">Move your mouse over a state for more information</div>
-<!-- Creates the map id -->
-  <div id='mapcontainer' ></div>
+  <!-- Creates the map id -->
+  <div id='mapcontainer'></div>
   <!-- Creates the sidebar for the legend displaying the rate of HIV diagnoses per state -->
-      <div id="sidebar">
-          <div id='state legend' class='info-box legend'>
-    <h4>Legend</h4>
-    <div><span style='background-color: #fee5d9'></span>5 or less</div>
-    <div><span style='background-color: #fcae91'></span>5 - 10</div>
-    <div><span style='background-color: #fb6a4a'></span>10 - 15</div>
-    <div><span style='background-color: #cb181d'></span>Greater than 20</div>
-          </div>
-      </div>
+  <div id="sidebar">
+    <div id='state legend' class='info-box legend'>
+      <h4>Legend</h4>
+      <div><span style='background-color: #fee5d9'></span>5 or less</div>
+      <div><span style='background-color: #fcae91'></span>5 - 10</div>
+      <div><span style='background-color: #fb6a4a'></span>10 - 15</div>
+      <div><span style='background-color: #de2d26'></span>15 - 20</div>
+      <div><span style='background-color: #cb181d'></span>Greater than 20</div>
+    </div>
+  </div>
   </div>
 
-<!-- Creates three columns of information to populate about each category-->
-          <div class="container">
-            <div class="row">
-              <div class="col-sm">
-                Demographics
-                <br>
-                Population: <div id=“population”>.</div>
-                <br>
-                HIV Diagnoses per 100,000 people: <div id="diagnoses">.</div>
-              </div>
-              <div class="col-sm">
-                HIV Policies
-                <br>
-                Is HIV Education Mandatory: <div id="hived">.</div>
-                <br>
-                Percent of Public Schools offering HIV education in Middle School: <div id="hiv6">.</div>
-                <br>
-                Percent of Public Schools offering HIV education in High School: <div id="hiv9">.</div>
-              </div>
-              <div class="col-sm">
-                Sexual Education Policies
-                <br>
-                Is Sexual Education Mandatory: <div id="sexed">.</div>
-                <br>
-                Percent of Public Schools offering Sex education in Middle School: <div id="inform6">.</div>
-                <br>
-                Percent of Public Schools offering Sex education in High School: <div id="inform9">.</div>
-              </div>
-            </div>
-          </div>
-<h6 align="center"> Data was provided by The Henry J. Kaiser Family Foundation</h6>
+  <!-- Creates three columns of information to populate about each category-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        Demographics
+        <br>
+        State Name: <div id="name">.</div>
+        <br>
+        Population: <div id="pop">.</div>
+        <br>
+        HIV Diagnoses per 100,000 people: <div id="diagnoses">.</div>
+      </div>
+      <div class="col-sm">
+        HIV Policies
+        <br>
+        Is HIV Education Mandatory: <div id="hived">.</div>
+        <br>
+        Percent of Public Schools offering HIV education in Middle School: <div id="hiv6">.</div>
+        <br>
+        Percent of Public Schools offering HIV education in High School: <div id="hiv9">.</div>
+      </div>
+      <div class="col-sm">
+        Sexual Education Policies
+        <br>
+        Is Sexual Education Mandatory: <div id="sexed">.</div>
+        <br>
+        Percent of Public Schools offering Sex education in Middle School: <div id="inform6">.</div>
+        <br>
+        Percent of Public Schools offering Sex education in High School: <div id="inform9">.</div>
+      </div>
+    </div>
+  </div>
+  <h6 align="center"> Data was provided by The Henry J. Kaiser Family Foundation</h6>
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 

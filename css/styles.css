@@ -23,6 +23,7 @@
 .background {
   background-color: #c3c3c3;
 }
+
 .info-box {
   top: 10%;
   left: 10%;
@@ -31,7 +32,7 @@
   padding: 15px;
   border-radius: 11px;
   box-shadow: 1px 1px 7px #525252;
-  margin-bottom:15px
+  margin-bottom: 15px
 }
 
 .legend-color-box {
@@ -42,9 +43,9 @@
 }
 
 .legend div span {
-    border-radius: 50%;
-    display: inline-block;
-    height: 10px;
-    margin-right: 5px;
-    width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  width: 10px;
 }
